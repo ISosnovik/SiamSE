@@ -1,2 +1,3 @@
 Coming soon...
+
 **Ivan Sosnovik\*, Artem Moskalev\*, and Arnold Smeulders** [Scale Equivariance Improves Siamese Tracking](https://arxiv.org/pdf/2007.09115.pdf)
