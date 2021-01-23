@@ -1,0 +1,25 @@
+PRINT_FREQ: 10
+WORKERS: 32
+CHECKPOINT_DIR: 'snapshot/SESiamFCResNet22'   
+SIAMFC:
+  TRAIN:
+    MODEL: "SESiamFCResNet22"  
+    START_EPOCH: 0
+    END_EPOCH: 50
+    TEMPLATE_SIZE: 127
+    SEARCH_SIZE: 255
+    STRIDE: 8
+    BATCH: 24
+    PAIRS: 450000
+    PRETRAIN: './pretrain/SESiamFCResNet22_pretrained.pth'
+    LR: 0.01
+    LR_END: 0.00001
+    MOMENTUM: 0.9
+    WEIGHT_DECAY: 0.0001
+  DATASET:
+    SHIFT: 4
+    SCALE: 0.05
+    COLOR: 1
+    GOT10K:
+      PATH: 'datasets/GOT10K/crop255'
+      ANNOTATION: 'datasets/GOT10K/train.json'
