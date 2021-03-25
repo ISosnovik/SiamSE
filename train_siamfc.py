@@ -56,8 +56,8 @@ for epoch in range(config.SIAMFC.TRAIN.START_EPOCH, config.SIAMFC.TRAIN.END_EPOC
     for param_group in optimizer.param_groups:
         param_group['lr'] = cur_lr
 
-    model, writer_dict = siamfc_train(train_loader, model=model, optimizer=optimizer,
-                                      epoch=epoch + 1, cur_lr=cur_lr, cfg=config)
+    model = siamfc_train(train_loader, model=model, optimizer=optimizer,
+                         epoch=epoch + 1, cur_lr=cur_lr, cfg=config)
 
     if epoch >= 4:
         save_model(model, epoch, optimizer, config.SIAMFC.TRAIN.MODEL, config)
